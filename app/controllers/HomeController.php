@@ -24,5 +24,15 @@ class HomeController extends BaseController {
 
 	}
 
+	public function getMapView()
+	{
+		// Is the user logged in?
+		if (!Sentry::check())
+		{
+			return Redirect::route('/');
+		}		
+		$this->layout->nest('body','dashboard.map');
+
+	}
 
 }

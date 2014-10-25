@@ -157,6 +157,12 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="/map">
+                            <i class="icon-globe"></i>
+                            Map
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

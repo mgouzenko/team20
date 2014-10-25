@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Welcome {{$user->first_name}}</title>
+    <title>Welcome, {{$user->first_name}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -47,9 +47,8 @@
                 <div class="container-fluid">
                     <!-- BEGIN Brand -->
                     <a href="#" class="brand">
-                        <small>
-                           
-                            Welcome {{$user->first_name}} {{$user->last_name}} 
+                        <small>                           
+                            Welcome, {{$user->first_name}} {{$user->last_name}}!
                         </small>
                     </a>
                     <!-- END Brand -->
@@ -178,7 +177,6 @@
             </div>
                
     </div>
-
 
         <script>window.jQuery || document.write('<script src="assets/jquery/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="assets/bootstrap/bootstrap.min.js"></script>

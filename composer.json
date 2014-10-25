@@ -4,7 +4,12 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"cartalyst/sentry": "2.1.*",
+		"Mockery/Mockery": ">=0.9.1",
+		"intervention/image": "2.*",
+		"nesbot/Carbon": "*",
+        "liebig/cron": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

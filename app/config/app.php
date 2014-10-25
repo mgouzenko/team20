@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://admin',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'wVKqSTojEpofRulExSDwkICpq07oLpOk',
+	'key' => '0UbgwAYtDAbPvQLwCRw4C0jd6UIHPWU7',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -121,6 +121,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Cartalyst\Sentry\SentryServiceProvider',
+		'Intervention\Image\ImageServiceProvider',
+        'Liebig\Cron\CronServiceProvider'
 
 	),
 
@@ -188,6 +191,9 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Image' 		  => 'Intervention\Image\Facades\Image',
+		'Carbon' => 'Carbon\Carbon'
 
 	),
 

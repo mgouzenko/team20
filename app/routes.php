@@ -21,6 +21,7 @@ Route::get('/', array('as' => '/', function()
 
     return View::make('layouts.base')->nest('body', 'auth.signin');
 }));
+
 Route::get('/signout','AuthController@singout');
 Route::post('/auth','AuthController@authenticate');
 Route::get('/dashboard','HomeController@getDashboard');

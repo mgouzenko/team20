@@ -17,7 +17,7 @@ class CreateJobUserTable extends Migration {
             $table->increments('id');
             $table->integer('job_id');
             $table->integer('user_id');
-            $table->timestamps();
+            $table->timeStamps();
             $table->index('job_id');
             $table->index('user_id');
         });

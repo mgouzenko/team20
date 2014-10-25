@@ -23,4 +23,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	protected $hidden = array('password', 'remember_token');
 
+	/*
+	* Return all messages that blong to user
+	*/
+	public function getAllMyMessages()
+	{
+		return Message::where('from_user','=',$this->id)->orderBy('updated_at','desc')->get();
+	}
+
 }

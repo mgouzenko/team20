@@ -17,4 +17,10 @@ class MessageController extends BaseController {
 
 		return Redirect::to('/dashboard');
 	}
+
+	public function getAllMyMessage()
+	{
+		$currentUser = Sentry::getUser();
+		$messages = Message::where('toUser','=',$currentUser->id)->groupBy('updated_at','desc')->get();
+	}
 }

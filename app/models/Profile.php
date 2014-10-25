@@ -10,6 +10,13 @@ class Profile extends Eloquent {
 		return $this->belongsTo('User');
 	}
 
+	public static function initialUserProfileById($userId)
+	{
+		$profile = new self;
+		$profile->user_id = $userId;
+		$profile->save();
+	}
+
 	public function getNumber()
 	{
 		return $this->number;

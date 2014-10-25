@@ -1,12 +1,5 @@
 @section('body')
 
-
-		<div id="breadcrumbs">
-        <ul class="breadcrumb">
-            <li class="active"><i class="icon-home"></i> Home</li>
-            <li class="active">Google Maps</li>
-        </ul>
-    </div>
 		<div class="col-md-12">
         <div class="box box-magenta">
             <div class="box-title">

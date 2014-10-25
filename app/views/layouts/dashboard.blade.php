@@ -169,6 +169,11 @@
 
         <!-- BEGIN Content -->
             <div id="main-content">
+                    <div id="breadcrumbs">
+                        <ul class="breadcrumb">
+                            <li class="active"><i class="icon-home"></i> Home</li>
+                        </ul>
+                    </div>
                     @yield('body')
             </div>
                

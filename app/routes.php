@@ -26,4 +26,5 @@ Route::get('/signout','AuthController@singout');
 Route::post('/auth','AuthController@authenticate');
 Route::get('/dashboard','HomeController@getDashboard');
 Route::get('/map','HomeController@getMapView');
+Route::any('/store/msg','MessageController@postCreateMessage');
 

@@ -30,7 +30,6 @@
         <script src="assets/bootstrap/bootstrap.min.js"></script>
         <script src="assets/jquery-cookie/jquery.cookie.js"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-        <script src="http://maps.gstatic.com/maps-api-v3/api/js/18/11/main.js" type="text/javascript"></script>
         <script src="assets/gmaps/gmaps.js"></script>
         <script src="js/flaty.js"></script>
         <script type="text/javascript">

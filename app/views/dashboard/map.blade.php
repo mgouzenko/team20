@@ -19,7 +19,14 @@
         <script src="assets/gmaps/gmaps.js"></script>
 
         <script src="js/flaty.js"></script>
-        
+        <?php 
+            $curl = file_get_contents('http://www.ipinfo.io');
+            $curl = json_decode($curl);
+            $loc  = $curl->{'loc'};
+            $loc = explode(",", $loc);
+            $lat = $loc[0];
+            $lang = $loc[1];
+        ?>
         <script type="text/javascript">
 
                 $(document).ready(function(){
@@ -45,8 +52,8 @@
                 //Map with markers-------------------------
                 var map_markers = new GMaps({
                   div: '#gmap-markers',
-                  lat: -12.043333,
-                  lng: -77.028333
+                  lat: <?php echo $lat; ?>,
+                  lng: <?php echo $lang; ?>
                 });
 
                 // First Marker

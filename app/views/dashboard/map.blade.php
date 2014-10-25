@@ -19,6 +19,7 @@
         <script src="assets/gmaps/gmaps.js"></script>
 
         <script src="js/flaty.js"></script>
+        
         <script type="text/javascript">
 
                 $(document).ready(function(){
@@ -40,7 +41,7 @@
                 //     mapTypeControl: false,
                 //     overviewMapControl: false
                 // });
-
+                
                 //Map with markers-------------------------
                 var map_markers = new GMaps({
                   div: '#gmap-markers',
@@ -203,7 +204,11 @@
         <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
         <script src="/js/jquery.geocomplete.js"></script>
         <script>
-            jQuery('#datetimepicker').datetimepicker();
-            $("#geocomplete").geocomplete({ details: "form" });
+            $("#geocomplete")
+              .geocomplete()
+              .bind("geocode:result", function(event, result){
+                console.log(result.geometry.location);
+              });
+            
         </script>
 @stop

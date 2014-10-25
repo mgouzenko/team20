@@ -1,5 +1,5 @@
 @section('body')
-
+        <link rel="/css/jquery.datetimepicker.css" type="text/css">
         <script>window.jQuery || document.write('<script src="assets/jquery/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="assets/bootstrap/bootstrap.min.js"></script>
         <script src="assets/nicescroll/jquery.nicescroll.min.js"></script>
@@ -184,5 +184,26 @@
         </div>
 
 
-        
+        <form class="form text-center" role="form">
+        <ul class="list-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">Location</div>
+              <input class="form-control" type="text" placeholder="location" id="geocomplete" autocomplete="off">
+              <input name="lat" type="hidden" value="">
+              <input name="lng" type="hidden" value="">
+              <input name="formatted_address" type="hidden" value="">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-default">Save</button>
+        </ul>
+        </form>
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript" src="/js/jquery.datetimepicker.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+        <script src="/js/jquery.geocomplete.js"></script>
+        <script>
+            jQuery('#datetimepicker').datetimepicker();
+            $("#geocomplete").geocomplete({ details: "form" });
+        </script>
 @stop

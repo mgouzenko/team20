@@ -53,14 +53,6 @@
         <!-- BEGIN Theme Setting -->
 
         @yield('header')
-        @include('modals.messages')
-    
-            <div id="dynamicModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content" id="modal-content">
-                </div>
-              </div>
-            </div>
         @yield('body')
     </body>
 </html>

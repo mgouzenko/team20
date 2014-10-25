@@ -152,7 +152,7 @@
                 <!-- BEGIN Navlist -->
                 <ul class="nav nav-list">
                     <li class="">
-                        <a href="index.html">
+                        <a href="/dashboard">
                             <i class="icon-dashboard"></i>
                             <span>Dashboard</span>
                         </a>

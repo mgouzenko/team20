@@ -2,22 +2,27 @@
 
 class HomeController extends BaseController {
 
+	public $layout = 'layouts.dashboard';
+
 	/*
 	|--------------------------------------------------------------------------
-	| Default Home Controller
+	| getDashboard
 	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
 	*/
 
-	public function showWelcome()
+	public function getDashboard()
 	{
-		return View::make('hello');
+		// Is the user logged in?
+		if (!Sentry::check())
+		{
+			return Redirect::route('/');
+		}
+
+		$user = User::find(Sentry::getUser()->id);
+
+		$this->layout->nest('body','dashboard.welcome',array('title'=>'Welcome $user->first_name'));
+
 	}
+
 
 }

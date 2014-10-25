@@ -11,7 +11,18 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+
+Route::get('/', array('as' => '/', function()
+{   
+	// Is the user logged in?
+	if (Sentry::check())
+	{
+		return Redirect::route('dashboard');
+	}
+
+    return View::make('layouts.base')->nest('body', 'auth.signin');
+}));
+Route::get('/signout','AuthController@singout');
+Route::post('/auth','AuthController@authenticate');
+Route::get('/dashboard','HomeController@getDashboard');
+

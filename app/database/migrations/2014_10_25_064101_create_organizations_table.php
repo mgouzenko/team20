@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMessageReplyTable extends Migration {
+class CreateOrganizationsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,18 +12,13 @@ class CreateMessageReplyTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('messsage_reply', function($table)
+		Schema::create('organizations', function($table)
 		{
 			$table->increments('id');
-			$table->integer('message_id');
-			$table->integer('reply_id');
+			$table->text('name');
 			$table->timeStamps();
-			$table->index('message_id');
-			$table->index('reply_id');
-
 		});
 	}
-	
 
 	/**
 	 * Reverse the migrations.
@@ -32,7 +27,7 @@ class CreateMessageReplyTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('messsage_reply');	
+		Schema::drop('organizations');
 	}
 
 }

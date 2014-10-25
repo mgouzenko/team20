@@ -179,7 +179,7 @@
                     @yield('body')
             </div>
 
-            <!-- Modal -->
+<!-- Modal -->
         <div class="modal fade bs-example-modal-lg text-center" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="sendMessage">
         <div class="modal-dialog modal-lg">
              <div class="modal-content">

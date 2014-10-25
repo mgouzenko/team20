@@ -170,19 +170,50 @@
             <div id="main-content">
                     <div id="breadcrumbs">
                         <ul class="breadcrumb">
-                            <li class="active"><i class="icon-home"></i> Home</li>
+                            <li><button data-toggle="modal" data-target="#addEvent"><i class="icon-plus"></i> Add Event</button></li>
+                            <li><i class="icon-plus"></i> Add Scheduel</li>
+                            <li><button data-toggle="modal" data-target="#sendMessage"><i class="icon-plus"></i> Compose Message</button></li>
                         </ul>
                     </div>
                     @yield('body')
             </div>
-               
+
+            <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg text-center" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="sendMessage">
+        <div class="modal-dialog modal-lg">
+             <div class="modal-content">
+                   <form role="form" method="post" action="/store/msg">
+                        <div class="form-group">
+                            <?php $users = User::all(); ?>
+                            <?php $currentUser = Sentry::getUser(); ?>
+                            <label for="toUser">To User:</label>
+                            <select class="form-control" name="toUser">
+                                <?php foreach($users as $user): ?>
+                                <option value="{{$user->id}}">{{$user->first_name}} {{$user->last_name}} - {{$user->email}}</option>
+                            <?php endforeach; ?>
+
+                            </select>
+                        </div>
+                    <div class="form-group">
+                        <input type="hidden" value="{{$currentUser->id}}" name="fromUser">
+                        <label for="msg">To User:</label>
+                        <textarea rows="10" cols="90" name="msg"></textarea>
+                    </div>
+                    <div class="form-group">
+                            <button type="submit">Send</button>
+                    </div>
+                    </form>
+            </div>
+        </div>
     </div>
 
         <script>window.jQuery || document.write('<script src="assets/jquery/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="assets/bootstrap/bootstrap.min.js"></script>
+        
+
         <script src="assets/nicescroll/jquery.nicescroll.min.js"></script>
         <script src="assets/jquery-cookie/jquery.cookie.js"></script>
-
+        
         <!--page specific plugin scripts-->
         <script src="assets/flot/jquery.flot.js"></script>
         <script src="assets/flot/jquery.flot.resize.js"></script>
@@ -194,5 +225,8 @@
         <!--flaty scripts-->
         <script src="js/flaty.js"></script>
 
+        
     </body>
+
+
 </html>

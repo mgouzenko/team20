@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLocationsTable extends Migration {
+class CreateMessageReplyTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,15 +12,18 @@ class CreateLocationsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('locations', function($table)
+		Schema::create('messsage_reply', function($table)
 		{
 			$table->increments('id');
-			$table->text('latitude');
-			$table->text('longitude');
-			$table->text('name')->default('');
+			$table->integer('message_id');
+			$table->integer('reply_id');
 			$table->timeStamps();
+			$table->index('message_id');
+			$table->index('reply_id');
+
 		});
 	}
+	
 
 	/**
 	 * Reverse the migrations.
@@ -29,7 +32,7 @@ class CreateLocationsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('locations');
+		Schema::drop('messsage_reply');	
 	}
 
 }

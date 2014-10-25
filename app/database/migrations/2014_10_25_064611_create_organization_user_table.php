@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContactUserTable extends Migration {
+class CreateOrganizationUserTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,13 @@ class CreateContactUserTable extends Migration {
 	 */
 	public function up()
 	{
-        Schema::create('contact_user', function($table)
+		 Schema::create('organization_user', function($table)
         {
             $table->increments('id');
-            $table->integer('contact_id');
+            $table->integer('organization_id');
             $table->integer('user_id');
             $table->timestamps();
-            $table->index('contact_id');
+            $table->index('organization_id');
             $table->index('user_id');
         });
 	}
@@ -30,7 +30,7 @@ class CreateContactUserTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('contact_user');
+		 Schema::drop('organization_user');
 	}
 
 }

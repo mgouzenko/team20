@@ -17,7 +17,7 @@ class CreateOrganizationUserTable extends Migration {
             $table->increments('id');
             $table->integer('organization_id');
             $table->integer('user_id');
-            $table->timestamps();
+            $table->timeStamps();
             $table->index('organization_id');
             $table->index('user_id');
         });

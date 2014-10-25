@@ -49,7 +49,7 @@
                     <a href="#" class="brand">
                         <small>
                            
-                            Welcome {{$user->first_name}} {{$user->last_name}} 
+                            Welcome, {{$user->first_name}} {{$user->last_name}}!
                         </small>
                     </a>
                     <!-- END Brand -->
@@ -151,6 +151,7 @@
             <div id="sidebar" class="nav-collapse">
                 <!-- BEGIN Navlist -->
                 <ul class="nav nav-list">
+                    <li><button data-toggle="modal" data-target="#sendMessage"><i class="icon-plus"></i> Compose Message</button></li>
                     <li class="">
                         <a href="/dashboard">
                             <i class="icon-dashboard"></i>
@@ -169,13 +170,6 @@
 
         <!-- BEGIN Content -->
             <div id="main-content">
-                    <div id="breadcrumbs">
-                        <ul class="breadcrumb">
-                            <li><button data-toggle="modal" data-target="#addEvent"><i class="icon-plus"></i> Add Event</button></li>
-                            <li><i class="icon-plus"></i> Add Scheduel</li>
-                            <li><button data-toggle="modal" data-target="#sendMessage"><i class="icon-plus"></i> Compose Message</button></li>
-                        </ul>
-                    </div>
                     @yield('body')
             </div>
 

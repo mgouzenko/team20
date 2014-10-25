@@ -34,7 +34,7 @@
                 </div>
                 <hr/>
                 <p class="clearfix text-center">
-                    Email: <a href="mailto:pinaksaha@nyu.edu"> Pinak Saha </a> reagaurding any issues.
+                    Email: <a href="mailto:pinaksaha@nyu.edu"> team20 </a> regarding any issues.
                 </p>
                 <p class="clearfix text-center">
                 	Thank you.

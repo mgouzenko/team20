@@ -18,6 +18,8 @@ class CreateContactUserTable extends Migration {
             $table->integer('contact_id');
             $table->integer('user_id');
             $table->timestamps();
+            $table->index('contact_id');
+            $table->index('user_id');
         });
 	}
 

@@ -18,6 +18,8 @@ class CreateJobUserTable extends Migration {
             $table->integer('job_id');
             $table->integer('user_id');
             $table->timestamps();
+            $table->index('job_id');
+            $table->index('user_id');
         });
 	}
 
